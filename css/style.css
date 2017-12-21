@@ -1,0 +1,94 @@
+#wiki-viewer {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+h1,
+h2 {
+  margin: 5px 0;
+}
+
+form {
+  width: 300px;
+  margin: auto;
+}
+
+#search-box {
+  border-radius: 20px;
+  border: 3px solid #ddd;
+  font-size: 1.2em;
+  margin: 10px;
+  padding: 10px;
+  transition: border-color 0.5s;
+}
+
+#search-box:focus {
+  border-color: #888;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#articles {
+  position: absolute;
+  text-align: left;
+  opacity: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.article {
+  box-shadow: 1px 1px 6px #bbb;
+  border: 3px solid #fff;
+  margin: 10px;
+  padding: 5px;
+  transition: border-color 0.5s;
+}
+
+.article:hover {
+  border: 3px solid #888;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.lift-animation {
+  animation-name: lift;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.fadein-animation {
+  animation-name: fadein;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes lift {
+  from {top:50%}
+	to {top:80px}
+}
+
+@keyframes fadein {
+  from {opacity:0}
+	to {opacity:1}
+}
